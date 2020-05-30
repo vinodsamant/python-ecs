@@ -1,0 +1,43 @@
+version: '3.7'
+services:
+  nginx:
+    image: nginx:latest
+    container_name: nginx_stage
+    ports:
+      - "8001:80"
+    volumes:
+      - ./nginx_dev:/etc/nginx/conf.d
+      - .:/usr/src/app
+      - ./devlogdna:/var/log/nginx/
+    depends_on:
+      - web
+  web:
+    build: .
+    container_name: django_stage
+    command: bash -c "python manage.py collectstatic --noinput && python manage.py migrate && gunicorn vier.wsgi -b 0.0.0.0:80"
+    volumes:
+      - .:/usr/src/app
+    expose:
+      - "80"
+  redis:
+    image: redis
+    container_name: redis_stage
+
+  worker:
+    build: .
+    container_name: celery_stage
+    restart: "no"
+    command: bash -c "celery --app=vier.celery.app --concurrency=1 worker --loglevel=info"
+    volumes:
+      - .:/usr/src/app
+    depends_on:
+      - redis
+
+  celery-beat:
+    build: .
+    container_name: celery_beat_stage
+    command: bash -c "celery --app=vier.celery.app  beat --loglevel=info"
+    volumes:
+      - .:/usr/src/app
+    depends_on:
+      - redis

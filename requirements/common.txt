@@ -1,0 +1,43 @@
+Django==2.2.4
+
+# rest framework
+djangorestframework==3.10.2
+
+# swagger generator
+drf-yasg==1.16.1
+packaging==19.1
+
+# database adapter
+psycopg2-binary==2.8.3
+
+# reading env variables
+python-dotenv==0.10.2
+
+# accurate and cross platform timezone calculations
+pytz==2019.2
+
+# for image field
+pillow==6.1.0
+
+# aws
+boto==2.49.0
+boto3==1.13.18
+botocore==1.16.18
+django-storages==1.9.1
+
+django-cors-headers==3.1.0
+
+celery==4.3.0
+redis==3.3.8
+
+# fcm-django
+fcm-django==0.3.4
+
+# oAuth2 Authorization
+django-oauth-toolkit==1.2.0
+
+# twitter
+twython==3.7.0
+
+# django-decouple
+django-decouple==2.0

@@ -1,0 +1,7 @@
+FROM nginx:latest
+
+RUN rm /etc/nginx/conf.d/default.conf
+
+
+COPY . /usr/src/app/
+COPY ./nginx_dev/ /etc/nginx/conf.d/

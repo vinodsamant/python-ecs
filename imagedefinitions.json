@@ -1,0 +1,6 @@
+[
+  {
+    "name": "Dev-App",
+    "imageUri": "077742860396.dkr.ecr.us-east-1.amazonaws.com/vier-app/dev-ecs:1.0"
+  }
+]
