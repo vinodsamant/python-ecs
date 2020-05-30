@@ -1,7 +1,7 @@
 FROM python:3.7
 ENV PYTHONUNBUFFERED 1
-RUN mkdir /usr/src/
-WORKDIR /usr/src/
+RUN mkdir /usr/src/app/
+WORKDIR /usr/src/app/
 COPY . .
 RUN pip install -r requirements/server.txt
 RUN apt update
