@@ -7,8 +7,8 @@ RUN apt-get update \
 
 
 WORKDIR /usr/src/app
-RUN pip install -r requirements.txt
 COPY . .
+RUN pip install -r requirements/server.txt
 
 RUN apt install -y gdal-bin python3-gdal
 RUN apt install -y python-pip
