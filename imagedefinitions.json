@@ -1,6 +1,6 @@
 [
   {
     "name": "Dev-App",
-    "imageUri": "077742860396.dkr.ecr.us-east-1.amazonaws.com/vier-app/dev-ecs:1.0"
+    "imageUri": "715774272132.dkr.ecr.us-east-1.amazonaws.com/vinodsamant/python-django:1.0"
   }
 ]
