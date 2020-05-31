@@ -3,7 +3,7 @@ Resources:
   - TargetService:
       Type: AWS::ECS::Service
       Properties:
-        TaskDefinition: "python-django"
+        TaskDefinition: "python-django "
         LoadBalancerInfo:
           ContainerName: "Dev-App"
           ContainerPort: 8000
