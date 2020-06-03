@@ -3,7 +3,7 @@ Resources:
   - TargetService:
       Type: AWS::ECS::Service
       Properties:
-        TaskDefinition: "python-django "
+        TaskDefinition: "VierApp-App"
         LoadBalancerInfo:
-          ContainerName: "Dev-App"
+          ContainerName: "VierApp"
           ContainerPort: 8000

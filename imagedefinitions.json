@@ -1,6 +1,6 @@
 [
   {
-    "name": "Dev-App",
+    "name": "VierApp",
     "imageUri": "715774272132.dkr.ecr.us-east-1.amazonaws.com/vinodsamant/python-django:1.0"
   }
 ]
