@@ -1,7 +1,7 @@
 Django==2.2.4
 
 # rest framework
-djangorestframework==3.10.2
+djangorestframework==3.11.2
 
 # swagger generator
 drf-yasg==1.16.1
