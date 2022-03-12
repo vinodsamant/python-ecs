@@ -17,7 +17,7 @@ python-dotenv==0.10.2
 pytz==2019.2
 
 # for image field
-pillow==6.1.0
+pillow==9.0.1
 
 # aws
 boto==2.49.0
